@@ -1,0 +1,25 @@
+.masthead {
+    text-align: center;
+    color: #fff;
+    background-image: url(/assets/img/bckg-nyg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    min-height: 500px;
+    background-color: #F9FEF7;
+}
+
+.intro-text {
+    padding-top: 200px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}
+
+.bg-green {
+    /*background-color: #145A32;*/
+    background-color: #F9FEF7;
+}

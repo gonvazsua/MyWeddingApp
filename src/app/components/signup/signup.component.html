@@ -1,0 +1,75 @@
+<app-header [showLogo]="true"></app-header>
+
+<!-- Header -->
+<header class="masthead d-flex">
+  <div class="container text-center my-auto">
+
+  	<div class="row">
+  		<div class="col-3"></div>
+    	<div class="col-6 background">
+				
+				<form [formGroup]="signupForm" (ngSubmit)="submit()">
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="miemail@ejemplo.com" name="email" formControlName="email" maxlength="50">
+								<small id="emailHelp" class="form-text text-white text-left">Al registrarte, utilizarás tu email para acceder</small>
+								<small class="form-text text-warning text-left" *ngIf="signupForm.get('email').touched && !signupForm.get('email').valid">
+									El email que has introducido no es válido
+								</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" placeholder="Password" name="password" formControlName="password" maxlength="50">
+								<small class="form-text text-warning text-left" *ngIf="signupForm.get('password').touched && !signupForm.get('password').valid">
+									La contraseña tiene que tener al menos 6 caracteres
+								</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Nombre</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Nombre" name="name" formControlName="name" maxlength="50">
+								<small class="form-text text-warning text-left" *ngIf="signupForm.get('name').touched && !signupForm.get('name').valid">
+									¡Necesitamos tu nombre!
+								</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Apellidos</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Apellidos" name="lastname" formControlName="lastname" maxlength="50">
+								<small class="form-text text-warning text-left" *ngIf="signupForm.get('lastname').touched && !signupForm.get('lastname').valid">
+									¡Necesitamos tus apellidos!
+								</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-10 text-right">
+								<button type="submit" [disabled]="!signupForm.valid" class="btn btn-success">
+									Acceder
+								</button>
+							</div>
+						</div>
+						<div class="form-group row" *ngIf="signupError">
+							<div class="col-sm-12">
+								<div class="alert alert-warning msg-login" role="alert">
+									<strong>¡Ups!</strong> {{signupError}}
+								</div>
+							</div>	
+						</div>
+				</form>
+
+    		
+
+
+		</div>
+		<div class="col-3"></div>
+	</div>
+
+  </div>
+  <div class="overlay"></div>
+</header>

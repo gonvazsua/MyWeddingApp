@@ -1,0 +1,24 @@
+.navbar-gyn {
+    background-color: #F9FEF7;
+}
+
+.navbar-brand {
+    font-size: 40px !important;
+}
+
+.txt-gyn {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nyg-link {
+    font-weight: bold;
+    border-bottom: 0px solid #ffc107;
+    padding-bottom: 2px;
+    transition: border-bottom linear 0.1s
+}
+
+.nyg-link:hover {
+    border-bottom: 2px solid #ffc107;
+}

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Bootstrap V4 & Font awesome*/
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/*Google font family Pacifico*/
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Kalam');
+
+.hidden {
+	display: none;
+}
