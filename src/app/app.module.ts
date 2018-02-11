@@ -26,6 +26,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { AllergiesComponent } from './components/allergies/allergies.component';
+import { CentralComponent } from './components/central/central.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { AllergiesComponent } from './components/allergies/allergies.component';
     ProfileComponent,
     NavigationComponent,
     TimelineComponent,
-    AllergiesComponent
+    AllergiesComponent,
+    CentralComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

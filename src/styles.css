@@ -9,3 +9,8 @@
 .hidden {
 	display: none;
 }
+
+.font-nyg {
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+}

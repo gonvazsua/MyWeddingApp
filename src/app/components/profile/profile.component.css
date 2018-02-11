@@ -23,3 +23,17 @@
     /*background-color: #145A32;*/
     background-color: #F9FEF7;
 }
+
+.section-margin {
+    margin-top: 25px;
+}
+
+.divider {
+    background-color: #22705A; 
+    min-height: 200px;
+}
+
+.divider-text {
+    margin-top: 45px;
+    color: white;
+}
