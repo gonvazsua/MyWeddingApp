@@ -8,6 +8,9 @@
     color: #ffc107 !important;
     text-shadow: 1px 1px #1C1C1C;
     font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px !important;
 }
 
 .todo {
@@ -27,23 +30,11 @@
     background-position-y: 0;
 }
 
-.title-arcos {
-    text-align: left;
-    margin-top: 37px;
-    padding-left: 50px;
-}
-
 #el-hotel {
     background-image: url(/assets/img/hotel.jpg);
     background-size: cover;
     background-position-x: 0;
     background-position-y: 0;
-}
-
-.title-hotel {
-    margin-top: 45px;
-    text-align: right;
-    transform: rotate(-20deg);
 }
 
 #el-peluqueria {
@@ -53,19 +44,11 @@
     background-position-y: 0;
 }
 
-.title-peluqueria {
-    text-align: right;
-}
-
 #el-rosalejo {
     background-image: url(/assets/img/celebracion.jpg);
     background-size: cover;
     background-position-x: 0;
     background-position-y: 0;
-}
-
-.title-rosalejo {
-    text-align: center;
 }
 
 #el-restaurante {
@@ -75,6 +58,9 @@
     background-position-y: 0;
 }
 
-.title-restaurante {
-    text-align: center;
+#el-boda {
+    background-image: url(/assets/img/gyn.jpg);
+    background-size: cover;
+    background-position-x: 0;
+    background-position-y: 0;
 }
