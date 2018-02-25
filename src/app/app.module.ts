@@ -29,6 +29,7 @@ import { CentralComponent } from './components/central/central.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { AllergyComponent } from './components/allergy/allergy.component';
 import { AllergyService } from './services/allergy/allergy.service';
+import { UserService } from './services/user/user.service';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { AllergyService } from './services/allergy/allergy.service';
   providers: [
   	AuthService,
     AuthGuard,
-    AllergyService
+    AllergyService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

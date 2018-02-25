@@ -25,7 +25,7 @@ export class AuthService {
 
   	logout(): void {
         this.token = null;
-        localStorage.removeItem('token');
+        localStorage.clear();
     }
 
     signup(user: User): Observable<any> {

@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Allergy from '../../models/allergy';
 import { AllergyService } from '../../services/allergy/allergy.service';
 import {NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../../models/user';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-allergy',
@@ -12,6 +13,7 @@ import { User } from '../../models/user';
 export class AllergyComponent implements OnInit {
 
   @Input() user           : User;
+  @Output() userEvent     : EventEmitter<User>;
 
   private isCollapsed     : boolean;
   private allergies       : Array<Allergy>;
@@ -20,12 +22,14 @@ export class AllergyComponent implements OnInit {
 
   constructor(
       private allergyService: AllergyService,
-      private modalService: NgbModal) {
+      private modalService: NgbModal,
+      private userService: UserService) {
 
     this.isCollapsed = true;
     this.allergies = new Array<Allergy>();
     this.allergyError = null;
     this.saving = false;
+    this.userEvent = new EventEmitter<User>();
   }
 
   ngOnInit() {
@@ -44,15 +48,28 @@ export class AllergyComponent implements OnInit {
   }
 
   userHasAllergy(allergy) : boolean {
-    if(!this.user.allergies) return false;
-    else {
-      return this.user.allergies.includes(allergy);
-    }
+    if(this.user.allergies && this.user.allergies.find(a => a._id == allergy._id))
+      return true;
+    else return false;
   }
 
   selectAllergy(allergy) {
     if(!this.user.allergies) this.user.allergies = new Array<Allergy>();
-    this.user.allergies.push(allergy);
+    if(this.user.allergies.find(a => a._id == allergy._id)) 
+      this.user.allergies = this.user.allergies.filter(a => a._id !== allergy._id) //Remove
+    else 
+      this.user.allergies.push(allergy);
+    
+    this.userService.updateUser(this.user).subscribe(
+      success => { this.setUser(success) },
+      error => { this.user.allergies.splice(allergy, 1) }
+    );
+  }
+
+  setUser(user){
+    this.user = user;
+    localStorage.setItem("user", JSON.stringify(this.user));
+    this.userEvent.emit(this.user);
   }
 
 }
