@@ -28,6 +28,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { AllergiesComponent } from './components/allergies/allergies.component';
 import { CentralComponent } from './components/central/central.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
+import { AllergyComponent } from './components/allergy/allergy.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CountdownComponent } from './components/countdown/countdown.component';
     TimelineComponent,
     AllergiesComponent,
     CentralComponent,
-    CountdownComponent
+    CountdownComponent,
+    AllergyComponent
   ],
   imports: [
     BrowserModule,
