@@ -25,7 +25,6 @@ import { SecretComponent } from './components/secret/secret.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
-import { AllergiesComponent } from './components/allergies/allergies.component';
 import { CentralComponent } from './components/central/central.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { AllergyComponent } from './components/allergy/allergy.component';
@@ -42,7 +41,6 @@ import { AllergyComponent } from './components/allergy/allergy.component';
     ProfileComponent,
     NavigationComponent,
     TimelineComponent,
-    AllergiesComponent,
     CentralComponent,
     CountdownComponent,
     AllergyComponent
