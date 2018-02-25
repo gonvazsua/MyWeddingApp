@@ -28,6 +28,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { CentralComponent } from './components/central/central.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { AllergyComponent } from './components/allergy/allergy.component';
+import { AllergyService } from './services/allergy/allergy.service';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { AllergyComponent } from './components/allergy/allergy.component';
   ],
   providers: [
   	AuthService,
-    AuthGuard
+    AuthGuard,
+    AllergyService
   ],
   bootstrap: [AppComponent]
 })

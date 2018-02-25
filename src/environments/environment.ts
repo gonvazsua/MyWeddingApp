@@ -6,6 +6,7 @@
 export const environment = {
   	
   	production: false,
-  	endpoint : 'http://www.mywedding.plateandpic.com'
+	//endpoint : 'http://www.mywedding.plateandpic.com'
+	endpoint : 'http://localhost:3000'  
 
 };

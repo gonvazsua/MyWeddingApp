@@ -1,0 +1,23 @@
+.btn-allergies {
+    position: fixed;
+    right: 0px;
+    top: 80px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: none !important;
+    cursor: pointer;
+}
+
+.allergy {
+    opacity: 0.5;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.allergy:hover {
+    opacity: 1;
+}
+
+.selected {
+    opacity: 1;
+}
