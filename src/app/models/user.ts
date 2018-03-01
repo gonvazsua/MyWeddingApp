@@ -10,6 +10,7 @@ export class User {
 	public isConfirmed	: boolean;
 	public isActive		: boolean;
 	public allergies	: Array<Allergy>;
+	public lastLogin	: Date;
 
 	constructor(){
 		this._id = null;
@@ -20,6 +21,7 @@ export class User {
 		this.isConfirmed = null;
 		this.isActive = null;
 		this.allergies = null;
+		this.lastLogin = null;
 	}
 
 }
