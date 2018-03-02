@@ -30,6 +30,8 @@ import { CountdownComponent } from './components/countdown/countdown.component';
 import { AllergyComponent } from './components/allergy/allergy.component';
 import { AllergyService } from './services/allergy/allergy.service';
 import { UserService } from './services/user/user.service';
+import { FooterComponent } from './components/footer/footer.component';
+import { ConfirmPresenceComponent } from './components/confirm-presence/confirm-presence.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { UserService } from './services/user/user.service';
     TimelineComponent,
     CentralComponent,
     CountdownComponent,
-    AllergyComponent
+    AllergyComponent,
+    FooterComponent,
+    ConfirmPresenceComponent
   ],
   imports: [
     BrowserModule,
