@@ -34,4 +34,13 @@ export class ProfileComponent implements OnInit {
       this.userEvent.emit(this.user);
     }
 
+    saveUserFromChild(user) {
+      this.userService.updateUser(this.user).subscribe(
+        (user) => {
+          this.user = user;
+          this.userEvent.emit(this.user);
+        }
+      );
+    }
+
 }

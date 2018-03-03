@@ -1,7 +1,8 @@
 <app-navigation [user]="user"></app-navigation>
 
 <app-allergy [user]="user"></app-allergy>
-<app-confirm-presence [user]="user"></app-confirm-presence>
+<app-confirm-presence [user]="user" (userEvent)="saveUserFromChild($event)"></app-confirm-presence>
+<app-invitation [user]="user" (userEvent)="saveUserFromChild($event)"></app-invitation>
 
 <header class="masthead">
   <div class="container">

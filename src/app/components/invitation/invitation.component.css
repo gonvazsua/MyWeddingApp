@@ -1,0 +1,26 @@
+.btn-invitation {
+    position: fixed;
+    right: 26px;
+    bottom: 34%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: none !important;
+    cursor: pointer;
+    font-size: 38px;
+}
+
+.color-warning {
+    color: 	#E0AD34 !important;
+}
+
+.color-success {
+    color: #22705A !important;
+}
+
+.row-top {
+    margin-top: 20px;
+}
+
+.btn-warning {
+    color: #fff !important;
+}

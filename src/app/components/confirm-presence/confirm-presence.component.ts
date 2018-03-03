@@ -32,18 +32,9 @@ export class ConfirmPresenceComponent {
           this.user.companion = null;
           this.hasCompanion = false;
         }
-        this.saveUser(); 
+        this.userEvent.emit(this.user);
       },
       (dismiss) => {}
-    );
-  }
-
-  saveUser() {
-    this.userService.updateUser(this.user).subscribe(
-      (user) => {
-        this.user = user;
-        this.userEvent.emit(this.user);
-      }
     );
   }
 

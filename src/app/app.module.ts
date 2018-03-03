@@ -32,6 +32,7 @@ import { AllergyService } from './services/allergy/allergy.service';
 import { UserService } from './services/user/user.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ConfirmPresenceComponent } from './components/confirm-presence/confirm-presence.component';
+import { InvitationComponent } from './components/invitation/invitation.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ConfirmPresenceComponent } from './components/confirm-presence/confirm-
     CountdownComponent,
     AllergyComponent,
     FooterComponent,
-    ConfirmPresenceComponent
+    ConfirmPresenceComponent,
+    InvitationComponent
   ],
   imports: [
     BrowserModule,
