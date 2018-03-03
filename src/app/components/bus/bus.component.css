@@ -1,0 +1,22 @@
+.btn-bus {
+    position: fixed;
+    right: 29px;
+    bottom: 27%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: none !important;
+    cursor: pointer;
+    font-size: 38px;
+}
+
+.color-warning {
+    color: 	#E0AD34 !important;
+}
+
+.color-success {
+    color: #22705A !important;
+}
+
+.btn-warning {
+    color: #fff !important;
+}

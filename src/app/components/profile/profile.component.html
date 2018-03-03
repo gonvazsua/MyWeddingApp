@@ -3,6 +3,7 @@
 <app-allergy [user]="user"></app-allergy>
 <app-confirm-presence [user]="user" (userEvent)="saveUserFromChild($event)"></app-confirm-presence>
 <app-invitation [user]="user" (userEvent)="saveUserFromChild($event)"></app-invitation>
+<app-bus [user]="user" (userEvent)="saveUserFromChild($event)"></app-bus>
 
 <header class="masthead">
   <div class="container">

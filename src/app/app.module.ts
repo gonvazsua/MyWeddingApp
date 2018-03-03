@@ -33,6 +33,7 @@ import { UserService } from './services/user/user.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ConfirmPresenceComponent } from './components/confirm-presence/confirm-presence.component';
 import { InvitationComponent } from './components/invitation/invitation.component';
+import { BusComponent } from './components/bus/bus.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { InvitationComponent } from './components/invitation/invitation.componen
     AllergyComponent,
     FooterComponent,
     ConfirmPresenceComponent,
-    InvitationComponent
+    InvitationComponent,
+    BusComponent
   ],
   imports: [
     BrowserModule,
