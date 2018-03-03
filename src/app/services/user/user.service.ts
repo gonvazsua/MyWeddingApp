@@ -9,6 +9,10 @@ export class UserService {
 
   constructor(private http: Http) { }
 
+  private getUserLocalStorage() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
+
   private getOptions() : RequestOptions {
     let headers = new Headers();
     headers.append('x-access-token', localStorage.getItem("token"));
@@ -22,10 +26,14 @@ export class UserService {
   }
 
   updateUser(user: User): Observable<any> {
-    let headers = new Headers();
-    headers.append('x-access-token', localStorage.getItem("token"));
-    headers.append('Content-Type', 'application/json');
     return this.http.put(urls.users + '/' + user._id, JSON.stringify(user), this.getOptions())
+      .map(response => response.json())
+      .catch(this.handleError);
+  }
+
+  getLoggedUser() : Observable<any> {
+    let user = this.getUserLocalStorage();
+    return this.http.get(urls.users + '/' + user._id, this.getOptions())
       .map(response => response.json())
       .catch(this.handleError);
   }

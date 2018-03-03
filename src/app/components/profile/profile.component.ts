@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from '../../models/user';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +13,7 @@ export class ProfileComponent implements OnInit {
 
     private user        : User;
 
-    constructor() {
+    constructor(private userService: UserService) {
 
       this.userEvent  = new EventEmitter<User>();
       this.user       = new User();      
@@ -23,10 +24,14 @@ export class ProfileComponent implements OnInit {
     }
 
     getUser(){
-      let unparsedUser = localStorage.getItem("user");
-      this.user = JSON.parse(unparsedUser);
+      this.userService.getLoggedUser().subscribe(
+        (user) => this.setUser(user)
+      );
+    }
+
+    setUser(user) {
+      this.user = user;
       this.userEvent.emit(this.user);
-      console.log("emited: " + this.user);
     }
 
 }

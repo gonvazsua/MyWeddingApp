@@ -6,5 +6,16 @@
     border-bottom-right-radius: 0px;
     border-style: none !important;
     cursor: pointer;
+}
+
+.btn-yellow {
     color: 	#E0AD34 !important;
+}
+
+.btn-confirmed {
+    color: #22705A !important;
+}
+
+.btn-warning {
+    color: #fff !important;
 }

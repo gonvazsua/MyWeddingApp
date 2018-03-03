@@ -11,6 +11,10 @@ export class User {
 	public isActive		: boolean;
 	public allergies	: Array<Allergy>;
 	public lastLogin	: Date;
+	public address		: string;
+	public city			: string;
+	public postalCode	: number;
+	public companion	: string;
 
 	constructor(){
 		this._id = null;
@@ -22,6 +26,10 @@ export class User {
 		this.isActive = null;
 		this.allergies = null;
 		this.lastLogin = null;
+		this.address = null;
+		this.city = null;
+		this.postalCode = null;
+		this.companion = null;
 	}
 
 }
