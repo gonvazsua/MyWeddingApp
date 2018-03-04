@@ -53,3 +53,15 @@ header.masthead {
 .msg-login {
     margin-top: 10px;
 }
+
+.nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}

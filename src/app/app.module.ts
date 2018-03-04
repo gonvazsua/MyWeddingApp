@@ -19,9 +19,6 @@ import { AuthGuard } from './services/auth/AuthGuard';
 
 //Services
 import { AuthService } from './services/auth/auth.service';
-import { HeaderComponent } from './components/header/header.component';
-import { LoginComponent } from './components/login/login.component';
-import { SecretComponent } from './components/secret/secret.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
@@ -41,9 +38,6 @@ import { BusComponent } from './components/bus/bus.component';
     AppComponent,
     HomeComponent,
     SignupComponent,
-    HeaderComponent,
-    LoginComponent,
-    SecretComponent,
     ProfileComponent,
     NavigationComponent,
     TimelineComponent,
