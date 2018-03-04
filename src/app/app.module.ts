@@ -21,7 +21,6 @@ import { AuthGuard } from './services/auth/AuthGuard';
 import { AuthService } from './services/auth/auth.service';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
 import { CentralComponent } from './components/central/central.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { AllergyComponent } from './components/allergy/allergy.component';
@@ -40,7 +39,6 @@ import { BusComponent } from './components/bus/bus.component';
     SignupComponent,
     ProfileComponent,
     NavigationComponent,
-    TimelineComponent,
     CentralComponent,
     CountdownComponent,
     AllergyComponent,

@@ -37,3 +37,7 @@
     margin-top: 45px;
     color: white;
 }
+
+.lateral-buttons {
+    z-index: 100;
+}

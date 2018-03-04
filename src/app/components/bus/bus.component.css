@@ -1,12 +1,10 @@
 .btn-bus {
-    position: fixed;
-    right: 29px;
-    bottom: 27%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-style: none !important;
     cursor: pointer;
     font-size: 38px;
+    padding:10px;
 }
 
 .color-warning {

@@ -1,11 +1,12 @@
 .btn-allergies {
-    position: fixed;
-    right: 20px;
-    bottom: 50%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-style: none !important;
     cursor: pointer;
+}
+
+.allergy-img {
+    margin-bottom: 23px;
 }
 
 .allergy {
