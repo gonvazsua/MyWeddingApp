@@ -1,0 +1,26 @@
+.btn-warning {
+    color: #fff;
+}
+
+.row-top {
+    margin-top: 20px;
+}
+
+.scroll-comments {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scroll-comments > .row {
+    display:block;
+}
+
+.comment {
+    display: inline-block;
+    float: none;
+}
+
+.comment-text {
+    white-space: normal;
+}

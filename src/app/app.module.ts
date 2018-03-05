@@ -30,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ConfirmPresenceComponent } from './components/confirm-presence/confirm-presence.component';
 import { InvitationComponent } from './components/invitation/invitation.component';
 import { BusComponent } from './components/bus/bus.component';
-
+import { CommentComponent } from './components/comment/comment.component';
+import { CommentService } from './services/comment/comment.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BusComponent } from './components/bus/bus.component';
     FooterComponent,
     ConfirmPresenceComponent,
     InvitationComponent,
-    BusComponent
+    BusComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { BusComponent } from './components/bus/bus.component';
   	AuthService,
     AuthGuard,
     AllergyService,
-    UserService
+    UserService,
+    CommentService
   ],
   bootstrap: [AppComponent]
 })

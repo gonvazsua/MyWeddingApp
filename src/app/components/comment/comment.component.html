@@ -1,0 +1,78 @@
+<div class="scroll-comments">
+  <div class="row row-top">
+    <div class="comment col-xs-12 col-md-6 col-lg-4" *ngFor="let comment of comments" [@fadeInAnimation]>
+      <div class="row">
+        <div class="col-xs-2 col-md-3 col-lg-2 text-md-left text-xs-center">
+          <button class="btn btn-primary btn-lg">
+            {{comment.user.name | slice:0:1}}
+          </button>
+        </div>
+        <div class="col-xs-10 col-md-9 col-lg-10 text-md-left text-xs-center">
+          <div class="row">
+            <div class="col-lg-12 text-secondary font-italic">
+              {{ comment.creationDate | date:'short'}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 text-dark">
+              <p class="comment-text">{{ comment.comment}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row row-top">
+  <div class="col-lg-12 text-center">
+    <button class="btn btn-warning" (click)="addComment(commentModal)">
+      <fa name="comment" *ngIf="!loading"></fa>
+      <fa name="spinner" animation="spin" *ngIf="loading"></fa> Comentar
+    </button>
+  </div>
+</div>
+
+<ng-template #commentModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Comentarios</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="commentForm" (ngSubmit)="submitCommentForm()">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>¿Cuál es tu deseo para nosotros?</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <textarea class="form-control" name="comment" formControlName="comment" maxlength="50" rows="5" cols="10"></textarea>
+              <small class="form-text text-warning text-left" *ngIf="commentForm.get('comment').touched && !commentForm.get('comment').valid">
+                Este campo es obligatorio
+              </small>
+            </div>
+          </div>
+          <div class="row row-top">
+            <div class="col-lg-12 text-right">
+              <button type="submit" class="btn btn-warning">
+                <fa name="thumbs-up" *ngIf="!loading"></fa>
+                <fa name="spinner" animation="spin" *ngIf="loading"></fa> Enviar
+              </button>
+            </div>
+          </div>
+          <div class="row row-top" *ngIf="commentError">
+            <div class="col-lg-12">
+              <div class="alert alert-warning" role="alert">
+                <strong>¡Ups!</strong> Ha habido un problema al guardar el comentario
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>

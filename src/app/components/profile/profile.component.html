@@ -27,7 +27,7 @@
   <div class="container-fluid divider">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <div class="divider-text">
+        <div class="divider-text text-white">
             <h1 class="font-nyg">¡Bienvenidos!</h1>
             <app-countdown></app-countdown>
         </div>
@@ -35,6 +35,19 @@
     </div>
   </div>
 </section>
+
+<section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="divider-text">
+              <h1 class="font-nyg">¡Déjanos tu comentario!</h1>
+              <app-comment [user]="user"></app-comment>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section class="bg-green section-margin">
   <div class="container">

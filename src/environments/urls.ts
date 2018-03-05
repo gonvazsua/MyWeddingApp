@@ -6,6 +6,7 @@ export const urls = {
 	signup 		: environment.endpoint + '/signup',
 	secret		: environment.endpoint + '/secret',
 	allergy		: environment.endpoint + '/allergies',
-	users		: environment.endpoint + '/users'
+	users		: environment.endpoint + '/users',
+	comments	: environment.endpoint + '/comments'
 
 };
