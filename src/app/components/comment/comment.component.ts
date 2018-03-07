@@ -21,6 +21,7 @@ export class CommentComponent implements OnInit {
   private commentModal  : NgbModalRef;
   private commentError  : boolean;
   private loading       : boolean;
+  private selectedComment: Comment;
 
   constructor(
     private commentService: CommentService,
@@ -31,6 +32,7 @@ export class CommentComponent implements OnInit {
     this.commentModal = null;
     this.commentError = false;
     this.loading = false;
+    this.selectedComment = null;
     this.commentForm = this.fb.group({
       'comment' : ['', [Validators.required, Validators.maxLength(150)]],
     });
@@ -42,6 +44,7 @@ export class CommentComponent implements OnInit {
 
   loadComments() {
     this.loading = true;
+    this.comments = null;
     this.commentService.findAll().subscribe(
       (comments) => { 
         setTimeout(() => {
@@ -79,14 +82,44 @@ export class CommentComponent implements OnInit {
           comment.user = this.user;
           this.comments.splice(0, 0, comment);
           this.commentModal.close();
+          comment = null;
           this.loading = false;
-        }, 2000);
+        }, 1000);
       },
       (err) => { 
         this.commentError = true;
         this.loading = false;
       }
     );
+  }
+
+  deleteSelectedComment() {
+    if(!this.selectedComment) return;
+    this.loading = true;
+    this.commentService.delete(this.selectedComment._id).subscribe(
+      (comment) => {
+        setTimeout(() => {
+          this.comments = this.comments.filter(c => c._id != this.selectedComment._id)
+          this.loading = false;
+          this.selectedComment = null;
+        }, 1000);
+      },
+      (err) => {
+        this.loading = false;
+        this.selectedComment = null;
+      }
+    );
+  }
+
+  checkDeleteComment(comment) {
+    if(comment == this.selectedComment){
+      this.selectedComment = null;
+    } else {
+      if(comment.user._id == this.user._id) {
+        this.selectedComment = comment;
+        return;
+      }
+    } 
   }
 
 }

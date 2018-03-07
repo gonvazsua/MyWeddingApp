@@ -19,8 +19,19 @@
 .comment {
     display: inline-block;
     float: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .comment-text {
     white-space: normal;
+}
+
+.row-comment {
+    padding: 5px;
+}
+
+.selected-comment {
+    background-color: #eeeeee;
+    border: solid 1px #848484;
 }

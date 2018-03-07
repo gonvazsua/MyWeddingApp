@@ -28,7 +28,7 @@ export class CommentService {
 
   delete(commentId) : Observable<any> {
     return this.http.delete(urls.comments + '/' + commentId, this.getOptions())
-      .map(response => response.json())
+      .map(response => response)
       .catch(this.handleError);
   }
 

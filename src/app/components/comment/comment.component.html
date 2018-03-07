@@ -3,8 +3,12 @@
     <div class="col-lg-12 text-secondary"><fa name="spinner" size="3x" animation="spin"></fa></div>
   </div>
   <div class="row row-top" *ngIf="!loading">
-    <div class="comment col-xs-12 col-md-6 col-lg-4" *ngFor="let comment of comments" [@fadeInAnimation]>
-      <div class="row">
+    <div class="comment col-xs-12 col-md-6 col-lg-4"
+      *ngFor="let comment of comments" 
+      (click)="checkDeleteComment(comment)"
+      [ngClass]="{'selected-comment' : comment == selectedComment}" >
+      
+      <div class="row row-comment">
         <div class="col-xs-2 col-md-3 col-lg-2 text-md-left text-xs-center">
           <button class="btn btn-outline-info btn-lg">
             {{comment.user.name | slice:0:1}}
@@ -28,9 +32,12 @@
 </div>
 <div class="row row-top">
   <div class="col-lg-12 text-center">
-    <button class="btn btn-warning" (click)="addComment(commentModal)">
+    <button class="btn btn-warning" *ngIf="!selectedComment" (click)="addComment(commentModal)">
       <fa name="comment" *ngIf="!loading"></fa>
       <fa name="spinner" animation="spin" *ngIf="loading"></fa> Comentar
+    </button>
+    <button class="btn btn-danger" *ngIf="selectedComment" (click)="deleteSelectedComment()">
+      <fa name="trash"></fa> Eliminar
     </button>
   </div>
 </div>
