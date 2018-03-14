@@ -5,6 +5,7 @@
 
 /*Google font family Pacifico*/
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes|Kalam');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 .hidden {
 	display: none;
@@ -12,4 +13,12 @@
 
 .font-nyg {
 	font-family: 'Great Vibes', cursive;
+}
+
+.font-lobster {
+	font-family: 'Lobster', cursive;
+}
+
+.color-success {
+    color: #22705A !important;
 }

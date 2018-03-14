@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private http: Http) { }
 
-  private getUserLocalStorage() {
+  public getUserLocalStorage() {
     return JSON.parse(localStorage.getItem("user"));
   }
 

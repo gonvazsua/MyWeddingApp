@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,13 +11,16 @@ import { User } from '../../models/user';
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() user     : User;
+  private user     : User;
 
   constructor(
     private authService : AuthService,
+    private userService : UserService,
     private router      : Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = this.userService.getUserLocalStorage();
+  }
 
   logout() {
     this.authService.logout();

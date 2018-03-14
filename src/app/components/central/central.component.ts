@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-central',
   templateUrl: './central.component.html',
   styleUrls: ['./central.component.css']
 })
-export class CentralComponent implements OnInit {
+export class CentralComponent {
 
-  constructor() { }
+  @Input() user: User;
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+
+  goToHotels() {
+    this.router.navigate(['/hotels']);
   }
 
 }
