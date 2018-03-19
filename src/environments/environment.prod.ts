@@ -6,6 +6,6 @@
 export const environment = {
   	
   	production: true,
-  	endpoint : ''
+  	endpoint : 'http://www.api.mywedding.plateandpic.com'
 
 };

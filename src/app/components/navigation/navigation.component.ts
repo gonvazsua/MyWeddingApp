@@ -11,7 +11,7 @@ import { UserService } from '../../services/user/user.service';
 })
 export class NavigationComponent implements OnInit {
 
-  private user     : User;
+  public user     : User;
 
   constructor(
     private authService : AuthService,

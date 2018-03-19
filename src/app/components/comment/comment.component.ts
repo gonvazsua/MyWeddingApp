@@ -20,8 +20,8 @@ export class CommentComponent implements OnInit {
   private commentForm   : FormGroup;
   private commentModal  : NgbModalRef;
   private commentError  : boolean;
-  private loading       : boolean;
-  private selectedComment: Comment;
+  public  loading       : boolean;
+  public selectedComment: Comment;
 
   constructor(
     private commentService: CommentService,

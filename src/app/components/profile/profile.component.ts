@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
 
     @Output() userEvent   : EventEmitter<User>;
 
-    private user        : User;
+    public user        : User;
 
     constructor(private userService: UserService) {
 

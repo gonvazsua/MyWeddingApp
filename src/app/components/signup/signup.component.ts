@@ -14,8 +14,8 @@ import { User } from '../../models/user';
 })
 export class SignupComponent implements OnInit {
 
-  private signupForm					: FormGroup;
-  private signupError         : string;
+  public signupForm					  : FormGroup;
+  public  signupError         : string;
   private loading             : boolean;
 
   constructor(
