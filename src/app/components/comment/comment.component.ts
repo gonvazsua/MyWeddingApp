@@ -84,6 +84,7 @@ export class CommentComponent implements OnInit {
           this.commentModal.close();
           comment = null;
           this.loading = false;
+          this.commentForm.reset()
         }, 1000);
       },
       (err) => { 

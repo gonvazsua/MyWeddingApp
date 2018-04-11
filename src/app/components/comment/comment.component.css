@@ -1,5 +1,12 @@
-.btn-warning {
+.btn-yellow {
+    color: #333333;
+    background-color: #F4E16A;
+    transition: all 0.3s linear;
+}
+
+.btn-yellow:hover {
     color: #fff;
+    background-color: #333333;
 }
 
 .row-top {

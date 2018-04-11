@@ -26,4 +26,10 @@ export class NavigationComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/home']);
   }
+
+  navigateToProfileOrAdmin() {
+    if(this.user.isAdmin) this.router.navigate(['/admin']);
+    else this.router.navigate(['/profile']);
+  }
+  
 }

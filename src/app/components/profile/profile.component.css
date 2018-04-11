@@ -1,14 +1,10 @@
 .masthead {
     text-align: center;
     color: #fff;
-    background-image: url(/assets/img/bckg-nyg.jpg);
+    background-image: url(/assets/img/ng-verde.svg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
     min-height: 500px;
     background-color: #F9FEF7;
 }
@@ -29,7 +25,7 @@
 }
 
 .divider {
-    background-color: #22705A; 
+    background-color: #F4E16A; 
     min-height: 200px;
 }
 

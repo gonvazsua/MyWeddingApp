@@ -1,0 +1,15 @@
+.topbar {
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 50;
+}
+
+.topbar .top-navbar {
+    min-height: 70px;
+    padding: 0px 15px 0 0;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}

@@ -16,6 +16,7 @@ export class User {
 	public postalCode	: number;
 	public companion	: string;
 	public useBus		: boolean;
+	public isAdmin		: boolean;
 
 	constructor(){
 		this._id = null;
@@ -32,6 +33,7 @@ export class User {
 		this.postalCode = null;
 		this.companion = null;
 		this.useBus = false;
+		this.isAdmin = null;
 	}
 
 }

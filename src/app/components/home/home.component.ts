@@ -59,9 +59,9 @@ export class HomeComponent {
               localStorage.setItem('user', JSON.stringify(response.user));
               this.router.navigate(['/profile']);
             } 
+            this.loading = false;	
           }
         );
-      this.loading = false;	
     }
   }
 

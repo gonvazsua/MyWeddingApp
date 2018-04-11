@@ -16,9 +16,14 @@
     font-weight: bold;
     border-bottom: 0px solid #ffc107;
     padding-bottom: 2px;
-    transition: border-bottom linear 0.1s
+    color: #333333;
+    transition: all linear 0.1s
 }
 
 .nyg-link:hover {
-    border-bottom: 2px solid #ffc107;
+    text-decoration: underline;
+}
+
+.logout {
+    color: #384708;
 }

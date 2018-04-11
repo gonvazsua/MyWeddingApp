@@ -1,0 +1,25 @@
+section {
+    background: #eef5f9;
+    padding-top: 1rem;
+}
+
+.card-body h3 {
+    font-weight: 300;
+    margin-bottom: 0px;
+    line-height: 30px;
+    font-size: 21px;
+    color: #455a64;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-body h5 {
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+.align-self-center {
+    -ms-flex-item-align: center!important;
+    align-self: center!important;
+}

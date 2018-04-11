@@ -33,6 +33,8 @@ import { BusComponent } from './components/bus/bus.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { CommentService } from './services/comment/comment.service';
 import { HotelComponent } from './components/hotel/hotel.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { AdminNavigationComponent } from './components/admin/admin-navigation/admin-navigation.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { HotelComponent } from './components/hotel/hotel.component';
     InvitationComponent,
     BusComponent,
     CommentComponent,
-    HotelComponent
+    HotelComponent,
+    AdminComponent,
+    AdminNavigationComponent
   ],
   imports: [
     BrowserModule,

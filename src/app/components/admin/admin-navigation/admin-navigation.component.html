@@ -1,0 +1,23 @@
+<header class="topbar">
+
+  <nav class="navbar top-navbar navbar-expand-md navbar-light">
+    <div class="navbar-header">
+      <a class="navbar-brand text-muted">Nuria y Gonzalo: Administración</a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-muted text-muted" [routerLink]="['/profile']" title="Volver a pagina de invitados">
+            <fa name="black-tie" size="2x"></fa>              
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted text-muted" (click)="logout()" title="Salir">
+            <fa name="chevron-circle-left" size="2x"></fa>              
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>

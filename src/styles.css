@@ -20,5 +20,19 @@
 }
 
 .color-success {
-    color: #22705A !important;
+    color: #384708 !important;
+}
+
+.color-grey {
+	color: #333333 !important;
+}
+
+.btn-success {
+	background-color: #384708 !important;
+	border: none;
+	transition: all 0.2s linear;
+}
+
+.btn-success:hover {
+	background-color: #191e03 !important;
 }
