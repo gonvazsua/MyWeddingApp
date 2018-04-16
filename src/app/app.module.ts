@@ -35,6 +35,7 @@ import { CommentService } from './services/comment/comment.service';
 import { HotelComponent } from './components/hotel/hotel.component';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminNavigationComponent } from './components/admin/admin-navigation/admin-navigation.component';
+import { OurWeddingComponent } from './components/our-wedding/our-wedding.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AdminNavigationComponent } from './components/admin/admin-navigation/ad
     CommentComponent,
     HotelComponent,
     AdminComponent,
-    AdminNavigationComponent
+    AdminNavigationComponent,
+    OurWeddingComponent
   ],
   imports: [
     BrowserModule,

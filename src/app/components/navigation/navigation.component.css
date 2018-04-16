@@ -27,3 +27,18 @@
 .logout {
     color: #384708;
 }
+
+.no-ĺink {
+    padding: .5rem;
+    margin-right: 3rem;
+}
+
+.logo {
+    width: 12%;
+}
+
+@media(max-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+}

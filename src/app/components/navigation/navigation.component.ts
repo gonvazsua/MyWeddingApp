@@ -11,6 +11,8 @@ import { UserService } from '../../services/user/user.service';
 })
 export class NavigationComponent implements OnInit {
 
+  @Input() showLogo : boolean
+
   public user     : User;
 
   constructor(

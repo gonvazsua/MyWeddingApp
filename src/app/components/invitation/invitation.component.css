@@ -3,12 +3,12 @@
     border-bottom-right-radius: 0px;
     border-style: none !important;
     cursor: pointer;
-    font-size: 38px;
+    font-size: 50px;
     padding:10px;
 }
 
 .color-warning {
-    color: 	#E0AD34 !important;
+    color: #F4E16A !important;
 }
 
 .color-success {

@@ -5,13 +5,17 @@
     cursor: pointer;
 }
 
+.yellow {
+    color: #F4E16A !important;
+}
+
 .allergy-img {
     margin-bottom: 23px;
 }
 
 .allergy {
     opacity: 0.5;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
     cursor: pointer;
 }
 

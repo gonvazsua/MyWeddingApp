@@ -4,7 +4,7 @@
 }
 
 .section-hotel {
-    margin-top: 5rem;
+    margin-top: 1rem;
     min-height: 20rem;
     display: table;
     width: 100%;
@@ -22,10 +22,10 @@
     background-attachment: fixed;
 }
 
-#mesonDeLaMolinera {
+#elSantiscal {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-        url('/assets/img/molinera.jpg');
+        url('/assets/img/elSantiscal.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

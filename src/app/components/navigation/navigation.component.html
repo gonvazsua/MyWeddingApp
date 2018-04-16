@@ -1,8 +1,8 @@
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-gyn" id="mainNav">
   <div class="container-fluid">
-    <a class="navbar-brand js-scroll-trigger text-warning txt-gyn" [routerLink]="['/profile']">
-      <img src="/assets/img/ng.svg" />
+    <a class="navbar-brand js-scroll-trigger text-warning txt-gyn logo" [routerLink]="['/profile']">
+      <img *ngIf="showLogo" src="/assets/img/ng-verde.svg" />
     </a>
     <ul class="navbar-nav text-dark ml-auto">
       <li class="nav-item d-none d-lg-block" *ngIf="user.isAdmin">
@@ -10,7 +10,7 @@
           Bienvenido, {{user.name}}
         </a>
       </li>
-      <li class="nav-item d-none d-lg-block" *ngIf="!user.isAdmin">
+      <li class="nav-item no-ĺink" *ngIf="!user.isAdmin">
         Bienvenido, {{user.name}}
       </li>
       <li class="nav-item">

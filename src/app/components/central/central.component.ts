@@ -26,7 +26,7 @@ export class CentralComponent {
   }
 
   goToPlans() {
-    window.open("https://www.tripadvisor.es/Restaurants-g229461-Arcos_de_la_Frontera_Costa_de_la_Luz_Andalucia.html", "_blank");
+    window.open("https://www.tripadvisor.es/Attractions-g229461-Activities-Arcos_de_la_Frontera_Costa_de_la_Luz_Andalucia.html", "_blank");
   }
 
 }

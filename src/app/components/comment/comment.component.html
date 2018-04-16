@@ -10,13 +10,13 @@
       
       <div class="row row-comment">
         <div class="col-xs-2 col-md-3 col-lg-2 text-md-left text-xs-center">
-          <button class="btn btn-outline-info btn-lg">
+          <button class="btn btn-outline-info btn-lg text-uppercase">
             {{comment.user.name | slice:0:1}}
           </button>
         </div>
         <div class="col-xs-10 col-md-9 col-lg-10 text-md-left text-xs-center">
           <div class="row">
-            <div class="col-lg-12 text-secondary font-italic">
+            <div class="col-lg-12 text-secondary font-italic text-capitalize">
               {{comment.user.name}} {{comment.user.lastname | slice:0:1}}. {{ comment.creationDate | date:'dd/MM/yyyy'}}
             </div>
           </div>

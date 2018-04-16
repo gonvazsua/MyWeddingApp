@@ -36,3 +36,7 @@
 .lateral-buttons {
     z-index: 100;
 }
+
+#actions {
+    background-color: #F9FEF7;
+}
